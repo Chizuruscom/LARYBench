@@ -1,4 +1,4 @@
-# LARY — Latent Action Representation Benchmark
+# LARY — A Latent Action Representation Yielding Benchmark for Generalizable Vision-to-Action Alignment
 
 <p align="center">
   <img src="assets/lary.jpg" alt="LARYBench" width="100%">
