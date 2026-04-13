@@ -313,6 +313,51 @@ section {
   margin-top: 3rem;
 }
 
+/* === HEATMAP GRID === */
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.heatmap-card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+}
+.sample-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.7rem;
+  border-radius: 4px;
+  margin: 0.6rem 0 0.6rem 0.6rem;
+  align-self: flex-start;
+}
+.sample-tag.positive {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+.sample-tag.negative {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+.heatmap-card img {
+  width: 100%;
+  display: block;
+}
+.heatmap-card .img-caption {
+  border-top: 1px solid var(--border);
+}
+@media (max-width: 640px) {
+  .heatmap-grid { grid-template-columns: 1fr; }
+}
+
 /* === LEADERBOARD === */
 .leaderboard-tabs {
   display: flex;
@@ -539,6 +584,7 @@ footer {
     <a href="#leaderboard">Leaderboard</a>
     <a href="#findings">Findings</a>
     <a href="#dataset">Dataset</a>
+    <a href="#samples">Samples</a>
     <a href="#citation">Citation</a>
   </div>
 </nav>
@@ -554,7 +600,7 @@ footer {
     A unified framework for evaluating latent action models on both low-level robotic actions and high-level semantic actions, spanning 1M+ videos and 151 action categories.
   </p>
   <div class="hero-buttons">
-    <a class="btn btn-primary" href="#">📄 Paper</a>
+    <a class="btn btn-primary" href="https://github.com/meituan-longcat/LARYBench/blob/main/LARYBench.pdf">📄 Paper</a>
     <a class="btn btn-ghost" href="#">arXiv</a>
     <a class="btn btn-ghost" href="#">💻 Code</a>
     <a class="btn btn-ghost" href="#">📦 Dataset</a>
@@ -615,21 +661,21 @@ footer {
     <table>
       <thead>
         <tr>
-          <th>Rank</th><th>Model</th><th>Paradigm</th><th>Params</th><th>Avg. Acc ↑</th><th>Atomic Robot</th><th>Comp. Human</th><th>Comp. Robot</th>
+          <th>Rank</th><th>Model</th><th>Paradigm</th><th>Params</th><th>Avg. Acc ↑</th><th>Comp. Human</th><th>Comp. Robot</th>
         </tr>
       </thead>
       <tbody>
-        <tr class="rank-1"><td><span class="rank-medal">🥇</span></td><td class="model-name">V-JEPA2</td><td><span class="paradigm-tag semantic">Semantic</span></td><td>303.89</td><td class="best-val">76.62</td><td>79.09</td><td>80.35</td><td>70.43</td></tr>
-        <tr><td><span class="rank-medal">🥈</span></td><td class="model-name">DINOv3</td><td><span class="paradigm-tag semantic">Semantic</span></td><td>303.13</td><td>68.68</td><td>60.79</td><td>76.19</td><td>69.06</td></tr>
-        <tr><td><span class="rank-medal">🥉</span></td><td class="model-name">LAPA-DINOv2</td><td><span class="paradigm-tag general">General LAM</span></td><td>473.69</td><td>49.36</td><td>58.04</td><td>55.86</td><td>34.19</td></tr>
-        <tr><td>3</td><td class="model-name">Wan2.2</td><td><span class="paradigm-tag pixel">Pixel</span></td><td>704.69</td><td>49.36</td><td>14.91</td><td>67.77</td><td>65.39</td></tr>
-        <tr><td>5</td><td class="model-name">LAPA-DINOv3</td><td><span class="paradigm-tag general">General LAM</span></td><td>472.45</td><td>49.17</td><td>56.27</td><td>64.19</td><td>27.04</td></tr>
-        <tr><td>6</td><td class="model-name">FLUX.2-dev</td><td><span class="paradigm-tag pixel">Pixel</span></td><td>84.05</td><td>47.48</td><td>51.95</td><td>46.12</td><td>44.36</td></tr>
-        <tr><td>7</td><td class="model-name">LAPA-SigLIP2</td><td><span class="paradigm-tag general">General LAM</span></td><td>200.83</td><td>43.67</td><td>46.83</td><td>54.74</td><td>29.44</td></tr>
-        <tr><td>8</td><td class="model-name">LAPA-MAGVIT2</td><td><span class="paradigm-tag general">General LAM</span></td><td>116.40</td><td>40.78</td><td>33.12</td><td>59.70</td><td>29.53</td></tr>
-        <tr><td>9</td><td class="model-name">villa-X</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td>238.71</td><td>20.90</td><td>15.00</td><td>17.80</td><td>29.90</td></tr>
-        <tr><td>10</td><td class="model-name">LAPA</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td>343.80</td><td>20.17</td><td>22.27</td><td>14.61</td><td>23.64</td></tr>
-        <tr><td>11</td><td class="model-name">UniVLA</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td>287.75</td><td>17.99</td><td>18.62</td><td>19.08</td><td>18.56</td></tr>
+        <tr class="rank-1"><td><span class="rank-medal">🥇</span></td><td class="model-name">V-JEPA2</td><td><span class="paradigm-tag semantic">Semantic</span></td><td>303.89</td><td class="best-val">75.39</td><td>80.35</td><td>70.43</td></tr>
+        <tr><td><span class="rank-medal">🥈</span></td><td class="model-name">DINOv3</td><td><span class="paradigm-tag semantic">Semantic</span></td><td>303.13</td><td>72.63</td><td>76.19</td><td>69.06</td></tr>
+        <tr><td><span class="rank-medal">🥉</span></td><td class="model-name">Wan2.2</td><td><span class="paradigm-tag pixel">Pixel</span></td><td>704.69</td><td>66.58</td><td>67.77</td><td>65.39</td></tr>
+        <tr><td>4</td><td class="model-name">LAPA-DINOv3</td><td><span class="paradigm-tag general">General LAM</span></td><td>472.45</td><td>45.62</td><td>64.19</td><td>27.04</td></tr>
+        <tr><td>5</td><td class="model-name">FLUX.2-dev</td><td><span class="paradigm-tag pixel">Pixel</span></td><td>84.05</td><td>45.24</td><td>46.12</td><td>44.36</td></tr>
+        <tr><td>6</td><td class="model-name">LAPA-DINOv2</td><td><span class="paradigm-tag general">General LAM</span></td><td>473.69</td><td>45.03</td><td>55.86</td><td>34.19</td></tr>
+        <tr><td>7</td><td class="model-name">LAPA-MAGVIT2</td><td><span class="paradigm-tag general">General LAM</span></td><td>116.40</td><td>44.62</td><td>59.70</td><td>29.53</td></tr>
+        <tr><td>8</td><td class="model-name">LAPA-SigLIP2</td><td><span class="paradigm-tag general">General LAM</span></td><td>200.83</td><td>42.09</td><td>54.74</td><td>29.44</td></tr>
+        <tr><td>9</td><td class="model-name">villa-X</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td>238.71</td><td>23.85</td><td>17.80</td><td>29.90</td></tr>
+        <tr><td>10</td><td class="model-name">LAPA</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td>343.80</td><td>19.13</td><td>14.61</td><td>23.64</td></tr>
+        <tr><td>11</td><td class="model-name">UniVLA</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td>287.75</td><td>18.82</td><td>19.08</td><td>18.56</td></tr>
       </tbody>
     </table>
   </div>
@@ -710,11 +756,11 @@ footer {
   <div class="wordcloud-row" style="margin-bottom: 2rem;">
     <div class="overview-img">
       <img src="imgs/action_wordcloud.jpg" alt="Action Word Cloud">
-      <p class="img-caption">Figure 2a. Word cloud of action verbs in the LARY benchmark.</p>
+      <p class="img-caption">Figure 2a. Word cloud of action verbs.</p>
     </div>
     <div class="overview-img">
       <img src="imgs/object_wordcloud.jpg" alt="Object Word Cloud">
-      <p class="img-caption">Figure 2b. Word cloud of object nouns in the LARY benchmark.</p>
+      <p class="img-caption">Figure 2b. Word cloud of object nouns.</p>
     </div>
   </div>
 
@@ -739,6 +785,36 @@ footer {
         <h4>Composite Robot</h4>
         <p>54 classes, 538K clips across 11 robotic embodiments.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLES -->
+<section id="samples">
+  <div class="section-label">// Samples</div>
+  <div class="section-title">Attention Heatmap Visualizations</div>
+  <div class="section-desc">Spatial attention maps from latent action models across diverse action categories, highlighting the regions most relevant to action recognition.</div>
+
+  <div class="heatmap-grid">
+    <div class="heatmap-card">
+      <div class="sample-tag positive">Positive Sample</div>
+      <img src="imgs/pos_1_catch.png" alt="Heatmap - Catch">
+      <p class="img-caption">Figure 3a. <strong>Positive sample</strong> — attention heatmap for <em>catch</em> action.</p>
+    </div>
+    <div class="heatmap-card">
+      <div class="sample-tag positive">Positive Sample</div>
+      <img src="imgs/pos_2_compress.png" alt="Heatmap - Compress">
+      <p class="img-caption">Figure 3b. <strong>Positive sample</strong> — attention heatmap for <em>compress</em> action.</p>
+    </div>
+    <div class="heatmap-card">
+      <div class="sample-tag negative">Negative Sample</div>
+      <img src="imgs/neg_1_brew.png" alt="Heatmap - Brew">
+      <p class="img-caption">Figure 3c. <strong>Negative sample</strong> — attention heatmap for <em>brew</em> action.</p>
+    </div>
+    <div class="heatmap-card">
+      <div class="sample-tag negative">Negative Sample</div>
+      <img src="imgs/neg_2_clench.png" alt="Heatmap - Clench">
+      <p class="img-caption">Figure 3d. <strong>Negative sample</strong> — attention heatmap for <em>clench</em> action.</p>
     </div>
   </div>
 </section>
