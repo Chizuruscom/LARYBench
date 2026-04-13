@@ -539,6 +539,24 @@ $MODEL_DIR/                                  ← LAM weight files (env: MODEL_DI
 
 ---
 
+## Citation
+
+If you find this work useful, please cite:
+
+```bibtex
+@article{larybench2026,
+  title     = {LARY: A Latent Action Representation Yielding Benchmark for Generalizable Vision-to-Action Alignment},
+  author    = {Dujun Nie and Fengjiao Chen and Qi Lv and Jun Kuang and Xiaoyu Li and Xuezhi Cao and Xunliang Cai},
+  year      = {2026},
+  eprint={},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2510.18915},
+}
+```
+
+---
+
 ## Acknowledgements
 
 We thank the following open-source projects for their contributions:
