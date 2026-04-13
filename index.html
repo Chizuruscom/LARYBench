@@ -417,6 +417,15 @@ section {
 .table-wrap .model-name { color: var(--text); font-weight: 600; }
 .table-wrap .rank-medal { font-size: 1rem; }
 .table-wrap .best-val { color: var(--accent2); font-weight: 700; }
+.table-wrap .params-val {
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  letter-spacing: 0.3px;
+}
 .table-wrap .paradigm-tag {
   display: inline-block;
   padding: 0.15rem 0.5rem;
@@ -591,13 +600,13 @@ footer {
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-badge"><span class="dot"></span> Benchmark for Latent Action Models</div>
+  <!-- <div class="hero-badge"><span class="dot"></span> Benchmark for Latent Action Models</div> -->
   <h1 class="hero-title">
     <span class="gradient">LARY</span><br>
     A Latent Action Representation<br>Yielding Benchmark
   </h1>
   <p class="hero-subtitle">
-    A unified framework for evaluating latent action models on both low-level robotic actions and high-level semantic actions, spanning 1M+ videos and 151 action categories.
+    A unified framework evaluating the foundational problem of utilizing large-scale human video datasets to bridge visual signals with ontology-independent actions, comprehensively assessing latent models on both low-level robotic execution and high-level semantic tasks across 1M+ videos and 151 action categories.
   </p>
   <div class="hero-buttons">
     <a class="btn btn-primary" href="https://github.com/meituan-longcat/LARYBench/blob/main/LARYBench.pdf">📄 Paper</a>
@@ -665,17 +674,17 @@ footer {
         </tr>
       </thead>
       <tbody>
-        <tr class="rank-1"><td><span class="rank-medal">🥇</span></td><td class="model-name">V-JEPA2</td><td><span class="paradigm-tag semantic">Semantic</span></td><td>303.89</td><td class="best-val">75.39</td><td>80.35</td><td>70.43</td></tr>
-        <tr><td><span class="rank-medal">🥈</span></td><td class="model-name">DINOv3</td><td><span class="paradigm-tag semantic">Semantic</span></td><td>303.13</td><td>72.63</td><td>76.19</td><td>69.06</td></tr>
-        <tr><td><span class="rank-medal">🥉</span></td><td class="model-name">Wan2.2</td><td><span class="paradigm-tag pixel">Pixel</span></td><td>704.69</td><td>66.58</td><td>67.77</td><td>65.39</td></tr>
-        <tr><td>4</td><td class="model-name">LAPA-DINOv3</td><td><span class="paradigm-tag general">General LAM</span></td><td>472.45</td><td>45.62</td><td>64.19</td><td>27.04</td></tr>
-        <tr><td>5</td><td class="model-name">FLUX.2-dev</td><td><span class="paradigm-tag pixel">Pixel</span></td><td>84.05</td><td>45.24</td><td>46.12</td><td>44.36</td></tr>
-        <tr><td>6</td><td class="model-name">LAPA-DINOv2</td><td><span class="paradigm-tag general">General LAM</span></td><td>473.69</td><td>45.03</td><td>55.86</td><td>34.19</td></tr>
-        <tr><td>7</td><td class="model-name">LAPA-MAGVIT2</td><td><span class="paradigm-tag general">General LAM</span></td><td>116.40</td><td>44.62</td><td>59.70</td><td>29.53</td></tr>
-        <tr><td>8</td><td class="model-name">LAPA-SigLIP2</td><td><span class="paradigm-tag general">General LAM</span></td><td>200.83</td><td>42.09</td><td>54.74</td><td>29.44</td></tr>
-        <tr><td>9</td><td class="model-name">villa-X</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td>238.71</td><td>23.85</td><td>17.80</td><td>29.90</td></tr>
-        <tr><td>10</td><td class="model-name">LAPA</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td>343.80</td><td>19.13</td><td>14.61</td><td>23.64</td></tr>
-        <tr><td>11</td><td class="model-name">UniVLA</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td>287.75</td><td>18.82</td><td>19.08</td><td>18.56</td></tr>
+        <tr class="rank-1"><td><span class="rank-medal">🥇</span></td><td class="model-name">V-JEPA2</td><td><span class="paradigm-tag semantic">Semantic</span></td><td><span class="params-val">303.89M</span></td><td class="best-val">75.39</td><td>80.35</td><td>70.43</td></tr>
+        <tr><td><span class="rank-medal">🥈</span></td><td class="model-name">DINOv3</td><td><span class="paradigm-tag semantic">Semantic</span></td><td><span class="params-val">303.13M</span></td><td>72.63</td><td>76.19</td><td>69.06</td></tr>
+        <tr><td><span class="rank-medal">🥉</span></td><td class="model-name">Wan2.2</td><td><span class="paradigm-tag pixel">Pixel</span></td><td><span class="params-val">704.69M</span></td><td>66.58</td><td>67.77</td><td>65.39</td></tr>
+        <tr><td>4</td><td class="model-name">LAPA-DINOv3</td><td><span class="paradigm-tag general">General LAM</span></td><td><span class="params-val">472.45M</span></td><td>45.62</td><td>64.19</td><td>27.04</td></tr>
+        <tr><td>5</td><td class="model-name">FLUX.2-dev</td><td><span class="paradigm-tag pixel">Pixel</span></td><td><span class="params-val">84.05M</span></td><td>45.24</td><td>46.12</td><td>44.36</td></tr>
+        <tr><td>6</td><td class="model-name">LAPA-DINOv2</td><td><span class="paradigm-tag general">General LAM</span></td><td><span class="params-val">473.69M</span></td><td>45.03</td><td>55.86</td><td>34.19</td></tr>
+        <tr><td>7</td><td class="model-name">LAPA-MAGVIT2</td><td><span class="paradigm-tag general">General LAM</span></td><td><span class="params-val">116.40M</span></td><td>44.62</td><td>59.70</td><td>29.53</td></tr>
+        <tr><td>8</td><td class="model-name">LAPA-SigLIP2</td><td><span class="paradigm-tag general">General LAM</span></td><td><span class="params-val">200.83M</span></td><td>42.09</td><td>54.74</td><td>29.44</td></tr>
+        <tr><td>9</td><td class="model-name">villa-X</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td><span class="params-val">238.71M</span></td><td>23.85</td><td>17.80</td><td>29.90</td></tr>
+        <tr><td>10</td><td class="model-name">LAPA</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td><span class="params-val">343.80M</span></td><td>19.13</td><td>14.61</td><td>23.64</td></tr>
+        <tr><td>11</td><td class="model-name">UniVLA</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td><span class="params-val">287.75M</span></td><td>18.82</td><td>19.08</td><td>18.56</td></tr>
       </tbody>
     </table>
   </div>
@@ -688,17 +697,17 @@ footer {
         </tr>
       </thead>
       <tbody>
-        <tr class="rank-1"><td><span class="rank-medal">🥇</span></td><td class="model-name">DINOv3</td><td><span class="paradigm-tag semantic">Semantic</span></td><td>303.13</td><td class="best-val">0.19</td><td>0.22</td><td>0.06</td><td>0.22</td><td>0.24</td></tr>
-        <tr><td><span class="rank-medal">🥈</span></td><td class="model-name">V-JEPA2</td><td><span class="paradigm-tag semantic">Semantic</span></td><td>303.89</td><td>0.25</td><td>0.27</td><td>0.07</td><td>0.32</td><td>0.33</td></tr>
-        <tr><td><span class="rank-medal">🥉</span></td><td class="model-name">Wan2.2</td><td><span class="paradigm-tag pixel">Pixel</span></td><td>704.69</td><td>0.30</td><td>0.39</td><td>0.09</td><td>0.34</td><td>0.39</td></tr>
-        <tr><td>4</td><td class="model-name">FLUX.2-dev</td><td><span class="paradigm-tag pixel">Pixel</span></td><td>84.05</td><td>0.35</td><td>0.25</td><td>0.04</td><td>0.47</td><td>0.62</td></tr>
-        <tr><td>5</td><td class="model-name">LAPA-DINOv3</td><td><span class="paradigm-tag general">General LAM</span></td><td>472.45</td><td>0.60</td><td>0.50</td><td>0.25</td><td>0.82</td><td>0.84</td></tr>
-        <tr><td>6</td><td class="model-name">LAPA-DINOv2</td><td><span class="paradigm-tag general">General LAM</span></td><td>473.69</td><td>0.63</td><td>0.55</td><td>0.26</td><td>0.85</td><td>0.86</td></tr>
-        <tr><td>7</td><td class="model-name">LAPA-MAGVIT2</td><td><span class="paradigm-tag general">General LAM</span></td><td>116.40</td><td>0.65</td><td>0.59</td><td>0.36</td><td>0.80</td><td>0.83</td></tr>
-        <tr><td>8</td><td class="model-name">LAPA-SigLIP2</td><td><span class="paradigm-tag general">General LAM</span></td><td>200.83</td><td>0.65</td><td>0.57</td><td>0.30</td><td>0.86</td><td>0.88</td></tr>
-        <tr><td>9</td><td class="model-name">villa-X</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td>238.71</td><td>0.87</td><td>0.86</td><td>0.72</td><td>0.94</td><td>0.97</td></tr>
-        <tr><td>10</td><td class="model-name">UniVLA</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td>287.75</td><td>0.87</td><td>0.82</td><td>0.74</td><td>0.94</td><td>0.97</td></tr>
-        <tr><td>11</td><td class="model-name">LAPA</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td>343.80</td><td>0.97</td><td>0.96</td><td>0.95</td><td>0.96</td><td>1.00</td></tr>
+        <tr class="rank-1"><td><span class="rank-medal">🥇</span></td><td class="model-name">DINOv3</td><td><span class="paradigm-tag semantic">Semantic</span></td><td><span class="params-val">303.13M</span></td><td class="best-val">0.19</td><td>0.22</td><td>0.06</td><td>0.22</td><td>0.24</td></tr>
+        <tr><td><span class="rank-medal">🥈</span></td><td class="model-name">V-JEPA2</td><td><span class="paradigm-tag semantic">Semantic</span></td><td><span class="params-val">303.89M</span></td><td>0.25</td><td>0.27</td><td>0.07</td><td>0.32</td><td>0.33</td></tr>
+        <tr><td><span class="rank-medal">🥉</span></td><td class="model-name">Wan2.2</td><td><span class="paradigm-tag pixel">Pixel</span></td><td><span class="params-val">704.69M</span></td><td>0.30</td><td>0.39</td><td>0.09</td><td>0.34</td><td>0.39</td></tr>
+        <tr><td>4</td><td class="model-name">FLUX.2-dev</td><td><span class="paradigm-tag pixel">Pixel</span></td><td><span class="params-val">84.05M</span></td><td>0.35</td><td>0.25</td><td>0.04</td><td>0.47</td><td>0.62</td></tr>
+        <tr><td>5</td><td class="model-name">LAPA-DINOv3</td><td><span class="paradigm-tag general">General LAM</span></td><td><span class="params-val">472.45M</span></td><td>0.60</td><td>0.50</td><td>0.25</td><td>0.82</td><td>0.84</td></tr>
+        <tr><td>6</td><td class="model-name">LAPA-DINOv2</td><td><span class="paradigm-tag general">General LAM</span></td><td><span class="params-val">473.69M</span></td><td>0.63</td><td>0.55</td><td>0.26</td><td>0.85</td><td>0.86</td></tr>
+        <tr><td>7</td><td class="model-name">LAPA-MAGVIT2</td><td><span class="paradigm-tag general">General LAM</span></td><td><span class="params-val">116.40M</span></td><td>0.65</td><td>0.59</td><td>0.36</td><td>0.80</td><td>0.83</td></tr>
+        <tr><td>8</td><td class="model-name">LAPA-SigLIP2</td><td><span class="paradigm-tag general">General LAM</span></td><td><span class="params-val">200.83M</span></td><td>0.65</td><td>0.57</td><td>0.30</td><td>0.86</td><td>0.88</td></tr>
+        <tr><td>9</td><td class="model-name">villa-X</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td><span class="params-val">238.71M</span></td><td>0.87</td><td>0.86</td><td>0.72</td><td>0.94</td><td>0.97</td></tr>
+        <tr><td>10</td><td class="model-name">UniVLA</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td><span class="params-val">287.75M</span></td><td>0.87</td><td>0.82</td><td>0.74</td><td>0.94</td><td>0.97</td></tr>
+        <tr><td>11</td><td class="model-name">LAPA</td><td><span class="paradigm-tag embodied">Embodied LAM</span></td><td><span class="params-val">343.80M</span></td><td>0.97</td><td>0.96</td><td>0.95</td><td>0.96</td><td>1.00</td></tr>
       </tbody>
     </table>
   </div>
