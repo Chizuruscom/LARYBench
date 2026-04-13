@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LARY Benchmark</title>
+<title>LARY: A Latent Action Representation Yielding Benchmark for Generalizable Vision-to-Action Alignment</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -132,7 +132,7 @@ nav .links a:hover { color: var(--accent); }
 }
 
 h1.hero-title {
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.5rem;
@@ -603,10 +603,10 @@ footer {
   <!-- <div class="hero-badge"><span class="dot"></span> Benchmark for Latent Action Models</div> -->
   <h1 class="hero-title">
     <span class="gradient">LARY</span><br>
-    A Latent Action Representation<br>Yielding Benchmark
+    A Latent Action Representation Yielding Benchmark<br>for Generalizable Vision-to-Action Alignment
   </h1>
   <p class="hero-subtitle">
-    A unified framework evaluating the foundational problem of utilizing large-scale human video datasets to bridge visual signals with ontology-independent actions, comprehensively assessing latent models on both low-level robotic execution and high-level semantic tasks across 1M+ videos and 151 action categories.
+    A unified framework evaluating the foundational problem of utilizing large-scale human video datasets to bridge visual signals with ontology-independent actions, comprehensively assessing latent representations on both low-level robotic execution and high-level semantic tasks across 1M+ videos and 151 action categories.
   </p>
   <div class="hero-buttons">
     <a class="btn btn-primary" href="https://github.com/meituan-longcat/LARYBench/blob/main/LARYBench.pdf">📄 Paper</a>
@@ -645,9 +645,9 @@ footer {
   <div class="section-label">// Abstract</div>
   <div class="abstract-card">
     <p>
-      Scarcity of action data severely limits the generalization of Vision-Language-Action (VLA) models. While Latent Action Models (LAMs) address this by extracting representations from large-scale videos, their capacity for fine-grained proprioceptive control and robust generalization remains largely unquantified.
-      To bridge this gap, we introduce the <strong>Latent Action Representation Yielding (LARY) Benchmark</strong>, a unified framework for evaluating latent action models on both low-level robotic actions and high-level semantic actions. The comprehensively curated dataset encompasses over one million short videos (totaling >1,000 hours) spanning 151 kinds of actions, alongside 620K image pairs and 595K motion trajectories, covering diverse embodiments and environments.
-      Our experiment reveals two key insights: (i) <strong>General visual foundation models consistently outperform specialized embodied LAMs.</strong> (ii) <strong>Latent-based visual space is better aligned to robotic action space than pixel-based space.</strong> These demonstrate that robust latent actions naturally emerge from large-scale visual pre-training, and aligning control policies with the general visual features may be a promising way to VLA generalization.
+      While the shortage of explicit action data limits Vision-Language-Action (VLA) models, human action videos offer a scalable yet unlabeled data source. A critical challenge in utilizing large-scale human video datasets lies in transforming visual signals into ontology-independent representations, known as latent actions. However, the capacity of latent action representation to derive robust control from visual observations has yet to be rigorously evaluated.
+      We introduce the <strong>Latent Action Representation Yielding (LARY) Benchmark</strong>, a unified framework for evaluating latent action representations on both high-level semantic actions (<em>what to do</em>) and low-level robotic control (<em>how to do</em>). The comprehensively curated dataset encompasses over one million videos (1,000 hours) spanning 151 action categories, alongside 620K image pairs and 595K motion trajectories across diverse embodiments and environments.
+      Our experiments reveal two crucial insights: (i) <strong>General visual foundation models, trained without any action supervision, consistently outperform specialized embodied LAMs.</strong> (ii) <strong>Latent-based visual space is fundamentally better aligned to physical action space than pixel-based space.</strong> These results suggest that general visual representations inherently encode action-relevant knowledge for physical control, and that semantic-level abstraction serves as a fundamentally more effective pathway from vision to action than pixel-level reconstruction.
     </p>
     <div class="overview-img">
       <img src="imgs/lary.jpg" alt="LARY overview">
@@ -835,7 +835,7 @@ footer {
   <div class="citation-block">
     <button class="copy-btn" onclick="copyBib()">Copy</button>
     <pre>@article{lary2024,
-  title={LARY: A Latent Action Representation Yielding Benchmark},
+  title={LARY: A Latent Action Representation Yielding Benchmark for Generalizable Vision-to-Action Alignment},
   author={Nie, Dujun and Chen, Fengjiao and Kuang, Jun and Lv, Qi and Li, Xiaoyu and Cao, Xuezhi},
   journal={arXiv preprint arXiv:2024.xxxxx},
   year={2024}
