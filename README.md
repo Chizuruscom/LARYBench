@@ -570,11 +570,11 @@ LARYBench is built upon the following publicly available datasets. We gratefully
 | Dataset | Link |
 |---|---|
 | EgoDex | [github.com/apple/ml-egodex](https://github.com/apple/ml-egodex) |
-| Something-Something V2 | [paperswithcode.com/dataset/something-something-v2](https://paperswithcode.com/dataset/something-something-v2) |
+| Something-Something V2 | [something-something-v2](https://www.qualcomm.com/developer/software/something-something-v-2-dataset) |
 | Ego4D | [github.com/facebookresearch/Ego4d](https://github.com/facebookresearch/Ego4d) |
 | HoloAssist | [holoassist.github.io](https://holoassist.github.io/) |
 | EPIC-KITCHENS | [epic-kitchens.github.io](https://epic-kitchens.github.io/) |
-| TACO | [arxiv.org/abs/2401.08399](https://arxiv.org/abs/2401.08399) |
+| TACO | [taco2024.github.io](https://taco2024.github.io/) |
 | AgiBotWorld-Beta | [github.com/OpenDriveLab/AgiBot-World](https://github.com/OpenDriveLab/AgiBot-World) |
 | LIBERO | [github.com/Lifelong-Robot-Learning/LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO) |
 | RoboCOIN | [github.com/FlagOpen/RoboCOIN](https://github.com/FlagOpen/RoboCOIN) |
