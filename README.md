@@ -8,8 +8,8 @@
   <a href="https://ha8siouhdi.github.io/larybench_web/"><img src="https://img.shields.io/badge/Project-Page-blue?style=flat-square&logo=github" alt="Project Page"></a><a href="https://arxiv.org/abs/your-arxiv-id"><img src="https://img.shields.io/badge/arXiv-Paper-red?style=flat-square&logo=arxiv" alt="arXiv"></a><a href="https://huggingface.co/your-hf-repo"><img src="https://img.shields.io/badge/🤗-HuggingFace-yellow?style=flat-square" alt="HuggingFace"></a><a href="LARYBench.pdf"><img src="https://img.shields.io/badge/Paper-PDF-orange?style=flat-square&logo=adobeacrobatreader" alt="PDF"></a>
 </p>
 
-**LARY** is a unified evaluation framework for **Latent Action Models (LAMs)**.
-Given any LAM (or visual encoder), LARY provides three complementary evaluation pipelines:
+**LARY** is a unified evaluation framework for **latent action representations**.
+Given any model that produces latent action representations (LAMs or visual encoders), LARY provides three complementary evaluation pipelines:
 
 | Pipeline | Task |
 |---|---|
@@ -42,9 +42,9 @@ Given any LAM (or visual encoder), LARY provides three complementary evaluation 
 
 ## Overview
 
-While the shortage of explicit action data limits Vision-Language-Action (VLA) models, human action videos offer a promising data source. A critical challenge in utilizing large-scale human video datasets lies in transforming visual signals into ontology-independent representations, known as latent actions. However, the capacity of latent action representation to derive robust control from visual observations has yet to be rigorously evaluated.
+While the shortage of explicit action data limits Vision-Language-Action (VLA) models, human action videos offer a scalable yet unlabeled data source. A critical challenge in utilizing large-scale human video datasets lies in transforming visual signals into ontology-independent representations, known as latent actions. However, the capacity of latent action representation to derive robust control from visual observations has yet to be rigorously evaluated.
 
-To bridge this vision-to-action gap, we introduce the \textbf{Latent Action Representation Yielding (LARY) Benchmark}, a unified framework for evaluating latent action representations on both high-level semantic actions and low-level robotic control. The comprehensively curated dataset encompasses over one million videos (1,000 hours) spanning 151 action categories, alongside 620K image pairs and 595K motion trajectories across diverse embodiments and environments. Our experiments reveal two crucial insights: \textbf{(i) General visual foundation models consistently outperform specialized embodied LAMs. (ii) Latent-based visual space is fundamentally better aligned to physical action space than pixel-based space.} These findings demonstrate that robust physical actions naturally emerge from large-scale visual pre-training, suggesting that aligning control policies directly with general visual representations is the key to generalizable VLA models.
+We introduce the Latent Action Representation Yielding (LARY) Benchmark, a unified framework for evaluating latent action representations on both high-level semantic actions (\textit{what to do}) and low-level robotic control (\textit{how to do}). The comprehensively curated dataset encompasses over one million videos (1,000 hours) spanning 151 action categories, alongside 620K image pairs and 595K motion trajectories across diverse embodiments and environments. Our experiments reveal two crucial insights: (i) General visual foundation models, trained without any action supervision, consistently outperform specialized embodied LAMs. (ii) Latent-based visual space is fundamentally better aligned to physical action space than pixel-based space. These results suggest that general visual representations inherently encode action-relevant knowledge for physical control, and that semantic-level abstraction serves as a fundamentally more effective pathway from vision to action than pixel-level reconstruction.
 
 <p align="center">
   <img src="assets/framework.png" alt="LARYBench Overview" width="100%">
@@ -52,11 +52,11 @@ To bridge this vision-to-action gap, we introduce the \textbf{Latent Action Repr
 
 ## Contributions
 
-- **LARYBench**: A comprehensive benchmark that first decouples the evaluation of latent action representations from downstream policy performance. By probing both semantic understanding and physical control fidelity over 1.2M videos, 620K image pairs, and 595K trajectories across 151 action categories and 11 robotic embodiments, LARYBench enables direct, standardized measurement of representation quality itself.
+- **LARYBench**: We introduce LARYBench, a comprehensive benchmark that first decouples the evaluation of latent action representations from downstream policy performance. LARYBench probes representations along two complementary dimensions — high-level semantic action (*what to do*) encoding and the low-level physical dynamics required for robotic control (*how to do it*) — enabling direct, standardized measurement of representation quality itself.
 
-- **General LAMs**: To probe whether general visual priors can benefit latent action learning, we propose General LAMs, which apply the LAM training pipeline to frozen general vision backbones using only internet videos. This new model family serves as a critical bridge between pure vision encoders and specialized embodied LAMs in our evaluation.
+- **Large-Scale Data Engine**: To support rigorous evaluation, we develop an automated data engine to re-segment and re-annotate a large-scale corpus, yielding 1.2M videos, 620K image pairs, and 595K trajectories across 151 action categories and 11 robotic embodiments, covering both human and robotic agents from egocentric and exocentric perspectives in simulated and real-world environments.
 
-- **Key Findings**: Through systematic evaluation of 11 models, we reveal two consistent trends: (i) action-relevant features can emerge from large-scale visual pre-training without explicit action supervision, and (ii) latent-based feature spaces tend to align with robotic control better than pixel-based ones. These results suggest that future VLA systems may benefit more from leveraging general visual representations than from learning action spaces solely on scarce robotic data.
+- **Key Findings**: Through systematic evaluation of 11 models, we reveal two consistent findings: (i) action-relevant features can emerge from large-scale visual pre-training without explicit action supervision, and (ii) latent-based feature spaces tend to align with robotic control better than pixel-based ones. These results suggest that future VLA systems may benefit more from leveraging general visual representations than from learning action spaces solely on scarce robotic data.
 
 ---
 
