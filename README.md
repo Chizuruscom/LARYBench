@@ -35,8 +35,7 @@ Given any model that produces latent action representations (LAMs or visual enco
 
 - [x] Code
 - [x] Text annotations
-- [x] Partial validation datasets
-- [ ] Full validation datasets
+- [x] Validation datasets
 - [ ] Training datasets
 
 ---
