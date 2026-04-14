@@ -7,8 +7,8 @@
 <p align="center">
   <a href="https://meituan-longcat.github.io/LARYBench/"><img src="https://img.shields.io/badge/Project-Page-blue?style=flat-square&logo=github" alt="Project Page"></a>
   &nbsp;
-  <!-- <a href="https://arxiv.org/abs/your-arxiv-id"><img src="https://img.shields.io/badge/arXiv-Paper-red?style=flat-square&logo=arxiv" alt="arXiv"></a>
-  &nbsp; -->
+  <a href="https://arxiv.org/abs/2604.11689"><img src="https://img.shields.io/badge/arXiv-Paper-red?style=flat-square&logo=arxiv" alt="arXiv"></a>
+  &nbsp;
   <a href="https://huggingface.co/datasets/meituan-longcat/LARYBench"><img src="https://img.shields.io/badge/🤗-HuggingFace-yellow?style=flat-square" alt="HuggingFace"></a>
   &nbsp;
   <a href="LARYBench.pdf"><img src="https://img.shields.io/badge/Paper-PDF-orange?style=flat-square&logo=adobeacrobatreader" alt="PDF"></a>
@@ -565,13 +565,14 @@ $MODEL_DIR/                                  ← LAM weight files (env: MODEL_DI
 If you find this work useful, please cite:
 
 ```bibtex
-@article{larybench2026,
-  title     = {LARY: A Latent Action Representation Yielding Benchmark for Generalizable Vision-to-Action Alignment},
-  author    = {Dujun Nie and Fengjiao Chen and Qi Lv and Jun Kuang and Xiaoyu Li and Xuezhi Cao and Xunliang Cai},
-  year      = {2026},
-  eprint={},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL},
+@misc{nie2026larylatentactionrepresentation,
+      title={LARY: A Latent Action Representation Yielding Benchmark for Generalizable Vision-to-Action Alignment}, 
+      author={Dujun Nie and Fengjiao Chen and Qi Lv and Jun Kuang and Xiaoyu Li and Xuezhi Cao and Xunliang Cai},
+      year={2026},
+      eprint={2604.11689},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2604.11689}, 
 }
 ```
 
