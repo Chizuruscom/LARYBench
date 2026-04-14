@@ -11,6 +11,8 @@
   &nbsp;
   <a href="https://huggingface.co/datasets/meituan-longcat/LARYBench"><img src="https://img.shields.io/badge/🤗-HuggingFace-yellow?style=flat-square" alt="HuggingFace"></a>
   &nbsp;
+  <a href="https://modelscope.cn/datasets/meituan-longcat/LARYBench"><img src="https://img.shields.io/badge/ModelScope-ModelHub-blue" alt="ModelScope"></a>
+  &nbsp;
   <a href="LARYBench.pdf"><img src="https://img.shields.io/badge/Paper-PDF-orange?style=flat-square&logo=adobeacrobatreader" alt="PDF"></a>
   &nbsp;
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT License"></a>
