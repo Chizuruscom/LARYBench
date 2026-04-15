@@ -30,7 +30,7 @@ Given any model that produces latent action representations (LAMs or visual enco
 ---
 
 ## News
-
+- **[2026-04-15]** We release the training datasets.
 - **[2026-04-13]** We release the code, text annotations, and partial validation datasets. Training datasets are coming soon.
 
 ## Release Checklist
@@ -38,7 +38,7 @@ Given any model that produces latent action representations (LAMs or visual enco
 - [x] Code
 - [x] Text annotations
 - [x] Validation datasets
-- [ ] Training datasets
+- [x] Training datasets
 
 ---
 
